@@ -1,0 +1,68 @@
+
+
+<h1>Casa lux</h1>
+<hr>
+<div *ngFor="let cocina of usuarios; index as i ">
+    <div class="row">
+        <div class="col-3">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+
+                        <!----<img [src] = "cocina.image" [alt] = " ">-->
+                        <img src='{{"https://proxising.com" + cocina.image.slice(2)}}' [alt]=" "
+                            (click)="setearCentro(i)">
+
+                        <div class="card-body">
+                            {{cocina.name}}
+                           <!--- {{cocina.id}}-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-6">
+        <div class="row">
+            <!--<div class = "col-3" *ngFor="let photo of  aux[1].kitchens[0].photos[0]">-->
+            <div  align = "center "class="col-12" *ngFor="let photo of usuarios">
+                <p align = "center"> 
+                <img src = '{{"https://proxising.com/casalux/api/luxurykitchens/img/lk-collectionImg1.jpg "}}' width="400" height="300"   [alt] = " " (click)="selectImgCentral(photo)">
+               <!---- <img src='{{"https://proxising.com" + photo.id.slice(2)"}}' [alt]=" " (click)="selectImgCentral(photo)">-->
+                </p>   
+           <!----</div>-->
+
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <img src='{{"imagencentral"}}'>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    
+        <div class = "row-3">
+            <p align="right">
+               {{cocina.description}}
+
+            </p>
+           
+        </div>
+         
+               
+    
+
+   
+
+     
+
+
+
+    
